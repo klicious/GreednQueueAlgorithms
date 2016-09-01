@@ -23,6 +23,22 @@ public class GreednQueue {
 		System.out.println("============================================");
 		Change.main(changeInput);
 		System.out.println(parent + ".java :: main() :: " + Topic + " : " +  verifyResult("output.txt", topic + "_expected_output.txt"));
+		
+		// Queueing Theory
+		parent = "GreednQueue";
+		topic = "queueing_theory";
+		Topic = "Queueing Theory";
+		changeInput = getInputFromFile(topic + "_input.txt");
+		
+		if (changeInput == null) {
+			System.out.println(parent + ".java :: main() :: No strings read from " + topic + "_input.txt thus HALTing....");
+			return;
+		}	
+		System.out.println("============================================");
+		System.out.println(Topic + " Called");
+		System.out.println("============================================");
+		QueueingTheory.main(changeInput);
+		System.out.println(parent + ".java :: main() :: " + Topic + " : " +  verifyResult("output.txt", topic + "_expected_output.txt"));
 	}
 	
 	private static String getInputFromFile(String path) {
